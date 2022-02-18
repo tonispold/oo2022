@@ -28,6 +28,8 @@ public class Functions {
         String hinne = scanner.nextLine();
         if (Integer.parseInt(hinne) == 5) {
             return "Sooritasite töö maksimum hindele!";
+        } else if (Integer.parseInt(hinne) > 5) {
+            return "Teie sisestatud hinne on maksimum hindest suurem";
         } else {
             return "Seekord te kahjuks maksimum hinnet ei saanud.";
         }
