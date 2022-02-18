@@ -1,12 +1,12 @@
 public class Player {
-    int playerCoordinateY;
-    int playerCoordinateX;
+    int coordinateY;
+    int coordinateX;
     Direction direction = Direction.UP;
 
     // Constructor
     public Player(int worldHeight, int worldWidth) {
-        this.playerCoordinateY = generateRandomCoordinate(worldHeight);
-        this.playerCoordinateX = generateRandomCoordinate(worldWidth);
+        this.coordinateY = generateRandomCoordinate(worldHeight);
+        this.coordinateX = generateRandomCoordinate(worldWidth);
         this.direction = Direction.UP;
     }
 
@@ -32,23 +32,23 @@ public class Player {
         }
         switch (direction) {
             case LEFT:
-                if (playerCoordinateX > 1) {
-                    playerCoordinateX--;
+                if (coordinateX > 1) {
+                    coordinateX--;
                 }
                 break;
             case DOWN:
-                if (playerCoordinateY < worldHeight-2) {
-                    playerCoordinateY++;
+                if (coordinateY < worldHeight-2) {
+                    coordinateY++;
                 }
                 break;
             case RIGHT:
-                if (playerCoordinateX < worldWidth-2) {
-                    playerCoordinateX++;
+                if (coordinateX < worldWidth-2) {
+                    coordinateX++;
                 }
                 break;
             case UP:
-                if (playerCoordinateY > 1) {
-                    playerCoordinateY--;
+                if (coordinateY > 1) {
+                    coordinateY--;
                 }
                 break;
         }
