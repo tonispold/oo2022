@@ -11,6 +11,10 @@ public class Human {
         this.mees = mees;
     }
 
+    public void sayHello() {
+        System.out.println(nimi + " ütleb tere!");
+    }
+
     // to --> võtan toString()
     @Override
     public String toString() {
