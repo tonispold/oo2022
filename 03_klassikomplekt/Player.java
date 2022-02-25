@@ -2,12 +2,18 @@ public class Player {
     int coordinateY;
     int coordinateX;
     Direction direction = Direction.UP;
+    Item item;
 
     // Constructor
     public Player(int worldHeight, int worldWidth) {
         this.coordinateY = generateRandomCoordinate(worldHeight);
         this.coordinateX = generateRandomCoordinate(worldWidth);
         this.direction = Direction.UP;
+    }
+
+    public void addItem(Item item) {
+        this.item = item;
+        System.out.println("Mängija sai eseme + " + item.itemType);
     }
 
     public int generateRandomCoordinate(int worldSize) {
