@@ -24,19 +24,18 @@ public class Game2 {
         String input = scanner.nextLine();
 
         while (!input.equals("end")) {
-            mangija1.movePlayer(input, world.height, world.width);
+            mangija1.movePlayer(input,world.height,world.width);
             for (Item item:world.items) {
-                if (item.coordinateX == mangija1.coordinateX && item.coordinateY == mangija1.coordinateY) {
+                if (item.coordinateX == mangija1.coordinateX &&
+                        item.coordinateY == mangija1.coordinateY) {
                     mangija1.addItem(item);
-                    break;
                 }
             }
-
-            world.printMap(mangija1.coordinateY, mangija1.coordinateX, vaenlane1.coordinateY, vaenlane1.coordinateX);
+            world.printMap(mangija1.coordinateY,
+                    mangija1.coordinateX, vaenlane1.coordinateY,
+                    vaenlane1.coordinateX);
             input = scanner.nextLine();
         }
     }
-    public static int generateRandomCoordinate(int worldSize) {
-        return (int) (Math.random()*(worldSize-2))+1;
-    }
+
 }
