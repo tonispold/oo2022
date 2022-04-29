@@ -8,7 +8,7 @@ public class VehicleMain {
         int mileage;
         String ownership;
 
-        System.out.println("Teretulemast auto ülevaatusesse!\n\n");
+        System.out.println("Tere tulemast auto ülevaatusesse!\n\n");
         outer:
         while(true) {
             while (true) {
